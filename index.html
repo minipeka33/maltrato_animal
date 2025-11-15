@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detengamos el maltrato animal</title>
+  <style>
+    :root{
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --accent: #d9534f;
+      --muted: #6b7280;
+      --max-w: 900px;
+      --radius: 12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      background: linear-gradient(180deg, #eef2f7 0%, var(--bg) 100%);
+      margin:0;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:40px 16px;
+      color:#111827;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-w);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(15,23,42,0.08);
+      overflow:hidden;
+    }
+    header{
+      padding:28px 32px;
+      background:linear-gradient(90deg,#ffffff, #fff7f7);
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+    header h1{margin:0;font-size:20px}
+    header p{margin:0;color:var(--muted);font-size:14px}
+
+    main{padding:28px 32px;}
+    .intro{display:flex;gap:20px;align-items:center}
+    .intro .text{flex:1}
+    .intro p{margin:0;color:var(--muted);line-height:1.45}
+
+    .gallery{display:flex;gap:16px;margin-top:18px;flex-wrap:wrap}
+    .card{
+      background:#fafafa;
+      border-radius:10px;
+      padding:10px;
+      flex:1 1 260px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+    .card img{max-width:100%;height:auto;border-radius:8px;display:block}
+    .caption{margin-top:8px;color:var(--muted);font-size:14px}
+
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .fact{background:#fff;border-radius:8px;padding:12px;box-shadow:0 2px 8px rgba(12,12,12,0.03)}
+    .fact h3{margin:0 0 6px 0;font-size:15px}
+    .fact p{margin:0;color:var(--muted);font-size:14px}
+
+    .cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-outline{border:1px solid #e5e7eb;color:#111827;background:white}
+
+    footer{padding:18px 32px;background:#fafafa;color:var(--muted);font-size:13px}
+
+    @media (max-width:640px){
+      .facts{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      .intro{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Detengamos el maltrato animal</h1>
+        <p>Información, prevención y cómo ayudar — Porque todas las criaturas merecen respeto.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="text">
+          <p><strong>El maltrato animal</strong> incluye cualquier acción que cause sufrimiento, abandono o peligro a un animal. Muchas veces sucede en silencio: abandono en la calle, agresiones, negligencia en cuidados o explotación. Aquí encontrarás formas seguras, respetuosas y legales de reconocerlo y actuar para proteger a los animales.</p>
+        </div>
+      </section>
+
+      <section class="gallery" aria-label="Galería de imágenes">
+        <figure class="card">
+          <img src="img/perro.jpg" alt="Perro rescatado recibiendo cariño" width="420" height="280">
+          <figcaption class="caption">Perro rescatado: cuidado y recuperación en un centro de acogida.</figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="img/gat9on.jpg" alt="Gato en manos de voluntario" width="420" height="280">
+          <figcaption class="caption">Voluntarios ayudan a animales abandonados a encontrar hogar.</figcaption>
+        </figure>
+      </section>
+
+      <section class="facts" aria-label="Datos y acciones">
+        <div class="fact">
+          <h3>¿Cómo reconocer el maltrato?</h3>
+          <p>Signos como heridas sin tratar, apariencia desnutrida, miedo extremo o vivir en condiciones insalubres son señales de alerta. No siempre son visibles: el abandono y la falta de atención también cuentan.</p>
+        </div>
+
+        <div class="fact">
+          <h3>¿Qué puedes hacer?</h3>
+          <p>Si sospechas maltrato, documenta lo que ves (fotos/fecha/lugar), busca una organización local de protección animal y reporta el caso a las autoridades correspondientes. Nunca confrontes a la persona agresora si puede ponerte en riesgo.</p>
+        </div>
+
+        <div class="fact">
+          <h3>Cómo ayudar hoy</h3>
+          <p>Adopta responsablemente, ofrece tu tiempo como voluntario, dona a refugios locales o difunde información para aumentar la conciencia en tu comunidad.</p>
+        </div>
+
+        <div class="fact">
+          <h3>Recursos útiles</h3>
+          <p>Contacta refugios locales, veterinarios y líneas de denuncia en tu ciudad. Muchas organizaciones ofrecen orientación sobre cómo reportar y apoyar casos.</p>
+        </div>
+      </section>
+
+      <section class="cta">
+        <a class="btn btn-primary" href="#" role="button">Quiero ayudar</a>
+        <a class="btn btn-outline" href="#" role="button">Reportar un caso</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>Si necesitas información específica de tu país o ayuda inmediata, busca organizaciones locales de protección animal o la unidad ambiental de tu municipalidad.</p>
+    </footer>
+  </div>
+</body>
+</html>
